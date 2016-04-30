@@ -4,7 +4,7 @@
     api-level="16"
     density="xhdpi"
     format="7"
-    timestamp="7042333809345" >
+    timestamp="32019600386324" >
 
     <task
         name="javac"
@@ -19,14 +19,6 @@
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
-
-    <build timestamp="7042333809345" >
-        <artifact
-            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
-            type="MAIN" />
-    </build>
+    <build timestamp="32019600386324" />
 
 </instant-run>

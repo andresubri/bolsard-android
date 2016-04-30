@@ -9,7 +9,7 @@ package com.bolsard.castlestudio.bolsard;
  *
  * @author malmonte
  */
-public class RentaFijaRD {
+public class Result {
     private String codigo;
     private String emisor;
     private int ultNegociado;
