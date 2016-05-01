@@ -136,6 +136,10 @@
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_layout_snackbar_include.xml"
     },
     {
+        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/fragment_tab_2.xml",
+        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/fragment_tab_2.xml"
+    },
+    {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_media_cancel_action.xml"
     },
@@ -150,6 +154,10 @@
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/fragment_tab_3.xml",
+        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/fragment_tab_3.xml"
     },
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
@@ -182,6 +190,10 @@
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/fragment_tab_1.xml",
+        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/fragment_tab_1.xml"
     },
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",

@@ -70,6 +70,7 @@ public class TabsLayout extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setCurrentItem(1);
         new Scrapper(this).execute();
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -100,58 +101,6 @@ public class TabsLayout extends AppCompatActivity {
     }
 
     /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        public PlaceholderFragment() {
-        }
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_tabs_layout, container, false);
-            RecyclerView mRecyclerView;
-            LocalStorage ls = new LocalStorage(getActivity());
-            mRecyclerView = (RecyclerView) rootView.findViewById(R.id.result_recycler);
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-            mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-            TabsLayout fa = new TabsLayout();
-            switch (getArguments().getInt(ARG_SECTION_NUMBER)){
-                case 0:
-                    mRecyclerView.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.FIXED_RENT_DOP),ls.context));
-
-                case 1:
-                    mRecyclerView.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.FIXED_RENT_USD),ls.context));
-
-                case 2:
-                    mRecyclerView.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.VARIABLE_RENT_DOP),ls.context));
-
-            }
-            return rootView;
-        }
-    }
-
-
-
-    /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
@@ -165,7 +114,20 @@ public class TabsLayout extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            switch (position) {
+                case 0:
+                    FragmentTab1 tab1 = new FragmentTab1();
+                    return tab1;
+                case 1:
+                    FragmentTab2 tab2 = new FragmentTab2();
+                    return tab2;
+                case 2:
+                    FragmentTab3 tab3 = new FragmentTab3();
+                    return tab3;
+                default:
+                    return null;
+
+            }
         }
 
         @Override
