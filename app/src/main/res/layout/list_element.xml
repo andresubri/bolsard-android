@@ -8,9 +8,36 @@
     card_view:cardElevation="2dp"
     android:layout_height="110dp"
     android:clickable="false">
-    <TextView
-        android:id="@+id/name_element"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/code_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Codigo"/>
+        <TextView
+            android:id="@+id/publisher_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emisor"
+            />
+        <TextView
+            android:id="@+id/last_negotiated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ultimo negociado"/>
+        <TextView
+            android:id="@+id/price_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio Porcentaje"/>
+        <TextView
+            android:id="@+id/tir_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIR Porcentaje"/>
+    </LinearLayout>
 </android.support.v7.widget.CardView>

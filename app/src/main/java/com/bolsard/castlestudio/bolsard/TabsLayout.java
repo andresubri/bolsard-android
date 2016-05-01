@@ -1,9 +1,15 @@
 package com.bolsard.castlestudio.bolsard;
 
+import android.content.Context;
+import android.os.AsyncTask;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
@@ -21,6 +27,17 @@ import android.widget.TextView;
 
 import com.bolsard.castlestudio.bolsard.R;
 
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+
 public class TabsLayout extends AppCompatActivity {
 
     /**
@@ -32,12 +49,13 @@ public class TabsLayout extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
+    public List<List> resultList = new ArrayList<>();
 
     /**
      * The {@link ViewPager} that will host the section contents.
      */
+    public Context CONTEXT = this;
     private ViewPager mViewPager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,12 +70,10 @@ public class TabsLayout extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        new Scrapper(this).execute();
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-
-
     }
 
 
@@ -112,10 +128,28 @@ public class TabsLayout extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                   Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_tabs_layout, container, false);
-            new Scrapper().execute();
+            RecyclerView mRecyclerView;
+            LocalStorage ls = new LocalStorage(getActivity());
+            mRecyclerView = (RecyclerView) rootView.findViewById(R.id.result_recycler);
+            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+            mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+            TabsLayout fa = new TabsLayout();
+            switch (getArguments().getInt(ARG_SECTION_NUMBER)){
+                case 0:
+                    mRecyclerView.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.FIXED_RENT_DOP),ls.context));
+
+                case 1:
+                    mRecyclerView.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.FIXED_RENT_USD),ls.context));
+
+                case 2:
+                    mRecyclerView.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.VARIABLE_RENT_DOP),ls.context));
+
+            }
             return rootView;
         }
     }
+
+
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
