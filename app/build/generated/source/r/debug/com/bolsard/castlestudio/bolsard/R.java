@@ -2386,14 +2386,17 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f02004a;
         public static final int design_fab_background=0x7f02004b;
         public static final int design_snackbar_background=0x7f02004c;
-        public static final int ic_menu_camera=0x7f02004d;
-        public static final int ic_menu_gallery=0x7f02004e;
-        public static final int ic_menu_manage=0x7f02004f;
-        public static final int ic_menu_send=0x7f020050;
-        public static final int ic_menu_share=0x7f020051;
-        public static final int ic_menu_slideshow=0x7f020052;
-        public static final int notification_template_icon_bg=0x7f020054;
-        public static final int side_nav_bar=0x7f020053;
+        public static final int ic_action_chart_areaspline=0x7f02004d;
+        public static final int ic_action_file_chart=0x7f02004e;
+        public static final int ic_info_black_24dp=0x7f02004f;
+        public static final int ic_menu_camera=0x7f020051;
+        public static final int ic_menu_gallery=0x7f020052;
+        public static final int ic_menu_manage=0x7f020053;
+        public static final int ic_menu_send=0x7f020054;
+        public static final int ic_menu_share=0x7f020055;
+        public static final int ic_menu_slideshow=0x7f020056;
+        public static final int notification_template_icon_bg=0x7f020057;
+        public static final int side_nav_bar=0x7f020050;
     }
     public static final class id {
         public static final int action0=0x7f0c0086;
@@ -2411,7 +2414,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c0057;
         public static final int action_mode_bar_stub=0x7f0c0056;
         public static final int action_mode_close_button=0x7f0c003c;
-        public static final int action_settings=0x7f0c0099;
+        public static final int action_settings=0x7f0c0096;
         public static final int activity_chooser_view_content=0x7f0c003d;
         public static final int alertTitle=0x7f0c0049;
         public static final int always=0x7f0c0033;
@@ -2427,7 +2430,7 @@ containing a value of this type.
         public static final int chronometer=0x7f0c008d;
         public static final int clip_horizontal=0x7f0c002c;
         public static final int clip_vertical=0x7f0c002d;
-        public static final int code_result=0x7f0c007f;
+        public static final int code_result=0x7f0c0081;
         public static final int collapseActionView=0x7f0c0034;
         public static final int container=0x7f0c006f;
         public static final int contentPanel=0x7f0c004a;
@@ -2463,7 +2466,7 @@ containing a value of this type.
         public static final int imageView=0x7f0c0084;
         public static final int info=0x7f0c0091;
         public static final int item_touch_helper_previous_elevation=0x7f0c0005;
-        public static final int last_negotiated=0x7f0c0081;
+        public static final int last_negotiated=0x7f0c0082;
         public static final int left=0x7f0c0023;
         public static final int line1=0x7f0c008b;
         public static final int line3=0x7f0c008f;
@@ -2474,12 +2477,9 @@ containing a value of this type.
         public static final int middle=0x7f0c0032;
         public static final int mini=0x7f0c0030;
         public static final int multiply=0x7f0c0027;
-        public static final int nav_camera=0x7f0c0093;
-        public static final int nav_gallery=0x7f0c0094;
-        public static final int nav_manage=0x7f0c0096;
-        public static final int nav_send=0x7f0c0098;
-        public static final int nav_share=0x7f0c0097;
-        public static final int nav_slideshow=0x7f0c0095;
+        public static final int nav_emissions=0x7f0c0094;
+        public static final int nav_info=0x7f0c0095;
+        public static final int nav_stadistics=0x7f0c0093;
         public static final int nav_view=0x7f0c006a;
         public static final int navigation_header_container=0x7f0c0075;
         public static final int never=0x7f0c0036;
@@ -2488,10 +2488,10 @@ containing a value of this type.
         public static final int parallax=0x7f0c001b;
         public static final int parentPanel=0x7f0c0046;
         public static final int pin=0x7f0c001c;
-        public static final int price_percentage=0x7f0c0082;
+        public static final int price_percentage=0x7f0c0080;
         public static final int progress_circular=0x7f0c0006;
         public static final int progress_horizontal=0x7f0c0007;
-        public static final int publisher_result=0x7f0c0080;
+        public static final int publisher_result=0x7f0c007f;
         public static final int radio=0x7f0c0054;
         public static final int result_card=0x7f0c007e;
         public static final int result_recycler=0x7f0c007d;
