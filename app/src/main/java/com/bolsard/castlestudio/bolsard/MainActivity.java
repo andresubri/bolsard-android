@@ -5,6 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -75,7 +81,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_emissions) {
-            startActivity(new Intent(CONTEXT, TabsLayout.class));
+            //startActivity(new Intent(CONTEXT, TabsLayout.class));
+            EmissionsFragment emissionsFragment = new EmissionsFragment();
+            displayView(emissionsFragment);
         } else if (id == R.id.nav_info) {
 
         }
@@ -84,4 +92,17 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    public void displayView(android.support.v4.app.Fragment fragment){
+        if (fragment != null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .add(R.id.frame_container, fragment).commit();
+            setTitle("Emisiones");
+
+        } else {
+            // error in creating fragment
+            Log.e("MainActivity", "Error in creating fragment");
+        }
+    }
+
 }

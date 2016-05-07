@@ -60,6 +60,10 @@
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/app_bar_main.xml"
     },
     {
+        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/fragment_emissions.xml",
+        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/fragment_emissions.xml"
+    },
+    {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/select_dialog_singlechoice_material.xml"
     },
