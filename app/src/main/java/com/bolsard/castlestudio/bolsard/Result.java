@@ -10,51 +10,49 @@ package com.bolsard.castlestudio.bolsard;
  * @author malmonte
  */
 public class Result {
-    private String codigo;
-    private String emisor;
-    private int ultNegociado;
-    private float precioPorentaje;
-    private float tirPorcentaje;
+    private String code;
+    private String publisher;
+    private int lastNegociated;
+    private float pricePercentage;
+    private float tirPercentage;
 
-    public String getCodigo() {
-        return codigo;
+    public String getCode() {
+        return code;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public String getEmisor() {
-        return emisor;
+    public String getPublisher() {
+        return publisher;
     }
 
-    public void setEmisor(String emisor) {
-        this.emisor = emisor;
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
 
-    public int getUltNegociado() {
-        return ultNegociado;
+    public int getLastNegociated() {
+        return lastNegociated;
     }
 
-    public void setUltNegociado(int ultNegociado) {
-        this.ultNegociado = ultNegociado;
+    public void setLastNegociated(int lastNegociated) {
+        this.lastNegociated = lastNegociated;
     }
 
-    public float getPrecioPorentaje() {
-        return precioPorentaje;
+    public float getPricePercentage() {
+        return pricePercentage;
     }
 
-    public void setPrecioPorentaje(float precioPorentaje) {
-        this.precioPorentaje = precioPorentaje;
+    public void setPricePercentage(float pricePercentage) {
+        this.pricePercentage = pricePercentage;
     }
 
-    public float getTirPorcentaje() {
-        return tirPorcentaje;
+    public float getTirPercentage() {
+        return tirPercentage;
     }
 
-    public void setTirPorcentaje(float tirPorcentaje) {
-        this.tirPorcentaje = tirPorcentaje;
+    public void setTirPercentage(float tirPercentage) {
+        this.tirPercentage = tirPercentage;
     }
-    
-    
 }
