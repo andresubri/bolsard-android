@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_emissions) {
-            //startActivity(new Intent(CONTEXT, TabsLayout.class));
             EmissionsFragment emissionsFragment = new EmissionsFragment();
             displayView(emissionsFragment);
         } else if (id == R.id.nav_info) {

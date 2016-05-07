@@ -19,11 +19,6 @@
             </intent-filter>
 
         </activity>
-        <activity
-            android:name=".TabsLayout"
-            android:label="@string/title_activity_tabs_layout"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
     </application>
 
 </manifest>
