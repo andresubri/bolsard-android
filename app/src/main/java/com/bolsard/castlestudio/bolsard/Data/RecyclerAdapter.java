@@ -1,4 +1,4 @@
-package com.bolsard.castlestudio.bolsard;
+package com.bolsard.castlestudio.bolsard.Data;
 
 import android.content.Context;
 import android.support.v7.widget.CardView;
@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.bolsard.castlestudio.bolsard.Models.Result;
+import com.bolsard.castlestudio.bolsard.R;
 
 import java.util.List;
 

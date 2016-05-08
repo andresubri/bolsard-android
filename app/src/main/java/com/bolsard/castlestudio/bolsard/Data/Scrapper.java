@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bolsard.castlestudio.bolsard;
+package com.bolsard.castlestudio.bolsard.Data;
 
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.google.gson.Gson;
+import com.bolsard.castlestudio.bolsard.Models.Result;
+
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 

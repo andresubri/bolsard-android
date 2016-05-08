@@ -1,11 +1,11 @@
-package com.bolsard.castlestudio.bolsard;
+package com.bolsard.castlestudio.bolsard.Data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.bolsard.castlestudio.bolsard.Models.Result;
 import com.google.gson.Gson;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,8 +19,8 @@ public class LocalStorage {
     public static final String FIXED_RENT_USD = "FIXED_RENT_USD";
     public static final String VARIABLE_RENT_DOP = "VARIABLE_RENT_DOP";
     public List<Result> list;
-    SharedPreferences settings;
-    Context context;
+    public SharedPreferences settings;
+    public Context context;
 
     public LocalStorage(Context context) {
         this.context = context;

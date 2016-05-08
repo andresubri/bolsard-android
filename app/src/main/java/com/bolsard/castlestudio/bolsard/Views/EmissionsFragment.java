@@ -1,4 +1,4 @@
-package com.bolsard.castlestudio.bolsard;
+package com.bolsard.castlestudio.bolsard.Views;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.bolsard.castlestudio.bolsard.R;
+import com.bolsard.castlestudio.bolsard.Data.Scrapper;
 
 /**
  * Created by andriusic on 05/05/16.

@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="1c13d2232f4f7dc893a3ac2c69a88939fca17a40">
-        <dex dex="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_03c77672a2ce497935cff7271014e9fd361cb289.jar" />
-    </item>
-
-</items>
+<items version="2" />
