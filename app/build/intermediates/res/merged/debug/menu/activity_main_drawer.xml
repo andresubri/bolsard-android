@@ -5,15 +5,15 @@
         <item
             android:id="@+id/nav_stadistics"
             android:icon="@drawable/ic_action_chart_areaspline"
-            android:title="Estadisticas" />
+            android:title="@string/navigation_drawer_first_option" />
         <item
             android:id="@+id/nav_emissions"
             android:icon="@drawable/ic_action_file_chart"
-            android:title="Emisiones" />
+            android:title="@string/navigation_drawer_second_option" />
         <item
         android:id="@+id/nav_info"
         android:icon="@drawable/ic_info_black_24dp"
-        android:title="Informacion" />
+        android:title="@string/navigation_drawer_third_option" />
 
     </group>
 </menu>

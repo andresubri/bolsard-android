@@ -2648,10 +2648,12 @@ containing a value of this type.
         public static final int bottom_sheet_behavior=0x7f060017;
         public static final int character_counter_pattern=0x7f060018;
         public static final int navigation_drawer_close=0x7f060019;
-        public static final int navigation_drawer_open=0x7f06001a;
-        public static final int section_format=0x7f06001b;
+        public static final int navigation_drawer_first_option=0x7f06001a;
+        public static final int navigation_drawer_open=0x7f06001b;
+        public static final int navigation_drawer_second_option=0x7f06001c;
+        public static final int navigation_drawer_third_option=0x7f06001d;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int title_activity_tabs_layout=0x7f06001c;
+        public static final int title_activity_tabs_layout=0x7f06001e;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090089;

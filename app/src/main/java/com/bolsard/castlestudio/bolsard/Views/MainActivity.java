@@ -78,12 +78,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_stadistics) {
         StatisticsFragment statisticsFragment = new StatisticsFragment();
             displayView(statisticsFragment);
-            setTitle("Emisiones");
+            setTitle(R.string.navigation_drawer_first_option);
         } else if (id == R.id.nav_emissions) {
             EmissionsFragment emissionsFragment = new EmissionsFragment();
             displayView(emissionsFragment);
+            setTitle(R.string.navigation_drawer_second_option);
         } else if (id == R.id.nav_info) {
-
+            setTitle(R.string.navigation_drawer_third_option);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

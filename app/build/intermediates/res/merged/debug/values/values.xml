@@ -301,8 +301,10 @@
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_first_option">Estadisticas</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="navigation_drawer_second_option">Emisiones</string>
+    <string name="navigation_drawer_third_option">Informacion</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_tabs_layout">Bolsa RD</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
