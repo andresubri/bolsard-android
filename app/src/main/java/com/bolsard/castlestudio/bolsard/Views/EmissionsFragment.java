@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
 import com.bolsard.castlestudio.bolsard.R;
-import com.bolsard.castlestudio.bolsard.Data.Scrapper;
+import com.bolsard.castlestudio.bolsard.Data.EmissionsScrapper;
 
 /**
  * Created by andriusic on 05/05/16.
@@ -30,7 +30,7 @@ public class EmissionsFragment extends Fragment {
         //Position the ViewPager on the second tab
         mViewPager.setCurrentItem(1);
         //Get the data from the server
-        new Scrapper(getActivity()).execute();
+        new EmissionsScrapper(getActivity()).execute();
 
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
@@ -65,17 +65,17 @@ public class EmissionsFragment extends Fragment {
             switch (position) {
                 case 0:
                     EmissionsFragmentTab fixedRentUsdTab = new EmissionsFragmentTab();
-                    args.putString("info", LocalStorage.FIXED_RENT_USD);
+                    args.putString("info", LocalStorage.EMISSIONS_FIXED_RENT_USD);
                     fixedRentUsdTab.setArguments(args);
                     return fixedRentUsdTab;
                 case 1:
                     EmissionsFragmentTab fixedRentDopTab = new EmissionsFragmentTab();
-                    args.putString("info", LocalStorage.FIXED_RENT_DOP);
+                    args.putString("info", LocalStorage.EMISSIONS_FIXED_RENT_DOP);
                     fixedRentDopTab.setArguments(args);
                     return fixedRentDopTab;
                 case 2:
                     EmissionsFragmentTab variableRentDopTab = new EmissionsFragmentTab();
-                    args.putString("info", LocalStorage.VARIABLE_RENT_DOP);
+                    args.putString("info", LocalStorage.EMISSIONS_VARIABLE_RENT_DOP);
                     variableRentDopTab.setArguments(args);
                     return variableRentDopTab;
                 default:

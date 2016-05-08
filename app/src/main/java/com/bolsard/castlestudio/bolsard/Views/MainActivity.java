@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
+import com.bolsard.castlestudio.bolsard.Data.StatisticsScrapper;
 import com.bolsard.castlestudio.bolsard.R;
 
 public class MainActivity extends AppCompatActivity
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity
         //Setup NavigationView
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        //new StatisticsScrapper(this).execute();
     }
 
     @Override

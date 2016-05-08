@@ -1,6 +1,5 @@
 package com.bolsard.castlestudio.bolsard.Views;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -13,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
-import com.bolsard.castlestudio.bolsard.Data.Scrapper;
+import com.bolsard.castlestudio.bolsard.Data.EmissionsScrapper;
 import com.bolsard.castlestudio.bolsard.R;
 
 /**
@@ -30,7 +29,7 @@ public class StatisticsFragment extends Fragment {
         mViewPager = (ViewPager) rootView.findViewById(R.id.container);
         mViewPager.setAdapter(new SectionsPagerAdapter(getChildFragmentManager()));
         //Get the data from the server
-        new Scrapper(getActivity()).execute();
+        new EmissionsScrapper(getActivity()).execute();
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         return rootView;
@@ -64,12 +63,12 @@ public class StatisticsFragment extends Fragment {
             switch (position) {
                 case 0:
                     StatisticsFragmentTab fixedRentTab = new StatisticsFragmentTab();
-                    args.putString("info", LocalStorage.FIXED_RENT_DOP);
+                    args.putString("info", LocalStorage.EMISSIONS_FIXED_RENT_DOP);
                     fixedRentTab.setArguments(args);
                     return fixedRentTab;
                 case 1:
                     StatisticsFragmentTab invesmentFoundsTab = new StatisticsFragmentTab();
-                    args.putString("info", LocalStorage.VARIABLE_RENT_DOP);
+                    args.putString("info", LocalStorage.EMISSIONS_VARIABLE_RENT_DOP);
                     invesmentFoundsTab.setArguments(args);
                     return invesmentFoundsTab;
                 default:

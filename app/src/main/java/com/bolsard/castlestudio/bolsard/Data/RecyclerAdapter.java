@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.bolsard.castlestudio.bolsard.Models.Result;
+import com.bolsard.castlestudio.bolsard.Models.EmissionsResult;
 import com.bolsard.castlestudio.bolsard.R;
 
 import java.util.List;
@@ -17,12 +17,12 @@ import java.util.List;
  * Created by andriusic on 30/04/16.
  */
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
-    public List<Result> resultList;
+    public List<EmissionsResult> emissionsResultList;
     private int rowLayout;
     public Context mContext;
 
-    public RecyclerAdapter(List<Result> resultList, Context mContext) {
-        this.resultList = resultList;
+    public RecyclerAdapter(List<EmissionsResult> emissionsResultList, Context mContext) {
+        this.emissionsResultList = emissionsResultList;
         this.mContext = mContext;
         this.rowLayout = R.layout.list_element;
     }
@@ -37,17 +37,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, int position) {
         //Bind the data to the view
-    Result result = resultList.get(position);
-    holder.code.setText(result.getCode());
-    holder.publisher.setText(result.getPublisher());
-    holder.lastNegotiated.setText(String.valueOf(result.getLastNegociated()));
-    holder.price.setText(String.valueOf(result.getPricePercentage()));
-    holder.tir.setText(String.valueOf(result.getTirPercentage()));
+    EmissionsResult emissionsResult = emissionsResultList.get(position);
+    holder.code.setText(emissionsResult.getCode());
+    holder.publisher.setText(emissionsResult.getPublisher());
+    holder.lastNegotiated.setText(String.valueOf(emissionsResult.getLastNegociated()));
+    holder.price.setText(String.valueOf(emissionsResult.getPricePercentage()));
+    holder.tir.setText(String.valueOf(emissionsResult.getTirPercentage()));
     }
 
     @Override
     public int getItemCount() {
-        return resultList == null ? 0 : resultList.size();
+        return emissionsResultList == null ? 0 : emissionsResultList.size();
 
     }
 
