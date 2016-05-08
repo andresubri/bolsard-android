@@ -56,10 +56,6 @@
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/app_bar_main.xml"
     },
     {
-        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/fragment_emissions.xml",
-        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/fragment_emissions.xml"
-    },
-    {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/select_dialog_singlechoice_material.xml"
     },
@@ -92,10 +88,6 @@
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_navigation_menu.xml"
     },
     {
-        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/fragment_tab.xml",
-        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/fragment_tab.xml"
-    },
-    {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_layout_tab_icon.xml"
     },
@@ -106,6 +98,10 @@
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/fragment_tab_details.xml",
+        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/fragment_tab_details.xml"
     },
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
@@ -198,6 +194,10 @@
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/fragment_tabs.xml",
+        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/fragment_tabs.xml"
     },
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/list_element.xml",

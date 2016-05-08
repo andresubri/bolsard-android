@@ -2418,7 +2418,7 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f0c003d;
         public static final int alertTitle=0x7f0c0049;
         public static final int always=0x7f0c0033;
-        public static final int appbar=0x7f0c0077;
+        public static final int appbar=0x7f0c0078;
         public static final int beginning=0x7f0c0031;
         public static final int bottom=0x7f0c001d;
         public static final int buttonPanel=0x7f0c0044;
@@ -2432,7 +2432,7 @@ containing a value of this type.
         public static final int clip_vertical=0x7f0c002d;
         public static final int code_result=0x7f0c007e;
         public static final int collapseActionView=0x7f0c0034;
-        public static final int container=0x7f0c0079;
+        public static final int container=0x7f0c007a;
         public static final int contentPanel=0x7f0c004a;
         public static final int custom=0x7f0c0050;
         public static final int customPanel=0x7f0c004f;
@@ -2472,7 +2472,7 @@ containing a value of this type.
         public static final int line3=0x7f0c008c;
         public static final int listMode=0x7f0c000b;
         public static final int list_item=0x7f0c0041;
-        public static final int main_content=0x7f0c0076;
+        public static final int main_content=0x7f0c0077;
         public static final int media_actions=0x7f0c0086;
         public static final int middle=0x7f0c0032;
         public static final int mini=0x7f0c0030;
@@ -2494,7 +2494,7 @@ containing a value of this type.
         public static final int publisher_result=0x7f0c007c;
         public static final int radio=0x7f0c0054;
         public static final int result_card=0x7f0c007b;
-        public static final int result_recycler=0x7f0c007a;
+        public static final int result_recycler=0x7f0c0076;
         public static final int right=0x7f0c0024;
         public static final int screen=0x7f0c0028;
         public static final int scroll=0x7f0c0018;
@@ -2529,7 +2529,7 @@ containing a value of this type.
         public static final int status_bar_latest_event_content=0x7f0c0085;
         public static final int submit_area=0x7f0c0065;
         public static final int tabMode=0x7f0c000d;
-        public static final int tabs=0x7f0c0078;
+        public static final int tabs=0x7f0c0079;
         public static final int text=0x7f0c008d;
         public static final int text2=0x7f0c008b;
         public static final int textSpacerNoButtons=0x7f0c004d;
@@ -2598,8 +2598,8 @@ containing a value of this type.
         public static final int design_navigation_item_subheader=0x7f040025;
         public static final int design_navigation_menu=0x7f040026;
         public static final int design_navigation_menu_item=0x7f040027;
-        public static final int fragment_emissions=0x7f040028;
-        public static final int fragment_tab=0x7f040029;
+        public static final int fragment_tab_details=0x7f040028;
+        public static final int fragment_tabs=0x7f040029;
         public static final int list_element=0x7f04002a;
         public static final int nav_header_main=0x7f04002b;
         public static final int notification_media_action=0x7f04002c;

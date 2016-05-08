@@ -74,7 +74,10 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_emissions) {
+        if (id == R.id.nav_stadistics) {
+        StatisticsFragment statisticsFragment = new StatisticsFragment();
+            displayView(statisticsFragment);
+        } else if (id == R.id.nav_emissions) {
             EmissionsFragment emissionsFragment = new EmissionsFragment();
             displayView(emissionsFragment);
         } else if (id == R.id.nav_info) {

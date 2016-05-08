@@ -16,10 +16,10 @@ import com.bolsard.castlestudio.bolsard.Data.RecyclerAdapter;
 /**
  * Created by andriusic on 01/05/16.
  */
-public class FragmentTab3 extends Fragment{
+public class EmissionsFragmentTab3 extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_tab, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_tab_details, container, false);
         RecyclerView mRecyclerViewTab3 = (RecyclerView) rootView.findViewById(R.id.result_recycler);
         mRecyclerViewTab3.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerViewTab3.setItemAnimator(new DefaultItemAnimator());

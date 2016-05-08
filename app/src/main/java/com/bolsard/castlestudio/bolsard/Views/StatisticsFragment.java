@@ -25,7 +25,7 @@ public class StatisticsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_emissions, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_tabs, container, false);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -34,7 +34,6 @@ public class StatisticsFragment extends Fragment {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) rootView.findViewById(R.id.container);
         mViewPager.setAdapter(new SectionsPagerAdapter(getChildFragmentManager()));
-        mViewPager.setCurrentItem(1);
         new Scrapper(getActivity()).execute();
 
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
@@ -67,10 +66,10 @@ public class StatisticsFragment extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    FragmentTab1 tab1 = new FragmentTab1();
+                    StatisticsFragmentTab1 tab1 = new StatisticsFragmentTab1();
                     return tab1;
                 case 1:
-                    FragmentTab2 tab2 = new FragmentTab2();
+                    StatisticsFragmentTab2 tab2 = new StatisticsFragmentTab2();
                     return tab2;
                 default:
                     return null;
@@ -94,4 +93,5 @@ public class StatisticsFragment extends Fragment {
             return null;
         }
     }
+
 }

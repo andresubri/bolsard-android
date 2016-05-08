@@ -10,21 +10,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
-import com.bolsard.castlestudio.bolsard.R;
 import com.bolsard.castlestudio.bolsard.Data.RecyclerAdapter;
+import com.bolsard.castlestudio.bolsard.R;
 
 /**
- * Created by andriusic on 01/05/16.
+ * Created by andriusic on 07/05/16.
  */
-public class FragmentTab1 extends Fragment{
+public class StatisticsFragmentTab1 extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_tab, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_tab_details, container, false);
         RecyclerView mRecyclerViewTab1 = (RecyclerView) rootView.findViewById(R.id.result_recycler);
         mRecyclerViewTab1.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerViewTab1.setItemAnimator(new DefaultItemAnimator());
         LocalStorage ls = new LocalStorage(getActivity());
-        mRecyclerViewTab1.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.FIXED_RENT_USD),ls.context));
+        mRecyclerViewTab1.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.FIXED_RENT_DOP),ls.context));
         return rootView;
     }
+
 }

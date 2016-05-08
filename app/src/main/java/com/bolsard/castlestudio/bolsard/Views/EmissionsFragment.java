@@ -25,7 +25,7 @@ public class EmissionsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_emissions, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_tabs, container, false);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -67,13 +67,13 @@ public class EmissionsFragment extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    FragmentTab1 tab1 = new FragmentTab1();
+                    EmissionsFragmentTab1 tab1 = new EmissionsFragmentTab1();
                     return tab1;
                 case 1:
-                    FragmentTab2 tab2 = new FragmentTab2();
+                    EmissionsFragmentTab2 tab2 = new EmissionsFragmentTab2();
                     return tab2;
                 case 2:
-                    FragmentTab3 tab3 = new FragmentTab3();
+                    EmissionsFragmentTab3 tab3 = new EmissionsFragmentTab3();
                     return tab3;
                 default:
                     return null;
