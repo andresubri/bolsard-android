@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
-                    .add(R.id.frame_container, fragment).commit();
+                    .replace(R.id.frame_container, fragment).commit();
             setTitle("Emisiones");
 
         } else {

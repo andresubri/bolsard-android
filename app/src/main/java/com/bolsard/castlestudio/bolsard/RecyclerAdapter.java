@@ -34,11 +34,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, int position) {
     Result result = resultList.get(position);
-    holder.code.setText(result.getCodigo());
-    holder.publisher.setText(result.getEmisor());
-    holder.lastNegotiated.setText(String.valueOf(result.getUltNegociado()));
-    holder.price.setText(String.valueOf(result.getPrecioPorentaje()));
-    holder.tir.setText(String.valueOf(result.getTirPorcentaje()));
+    holder.code.setText(result.getCode());
+    holder.publisher.setText(result.getPublisher());
+    holder.lastNegotiated.setText(String.valueOf(result.getLastNegociated()));
+    holder.price.setText(String.valueOf(result.getPricePercentage()));
+    holder.tir.setText(String.valueOf(result.getTirPercentage()));
     }
 
     @Override
