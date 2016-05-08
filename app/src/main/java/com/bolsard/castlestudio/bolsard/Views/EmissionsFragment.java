@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
+import com.bolsard.castlestudio.bolsard.Data.StatisticsScrapper;
+import com.bolsard.castlestudio.bolsard.Models.EmissionsResult;
 import com.bolsard.castlestudio.bolsard.R;
 import com.bolsard.castlestudio.bolsard.Data.EmissionsScrapper;
 
@@ -30,7 +32,7 @@ public class EmissionsFragment extends Fragment {
         //Position the ViewPager on the second tab
         mViewPager.setCurrentItem(1);
         //Get the data from the server
-        new EmissionsScrapper(getActivity()).execute();
+        new StatisticsScrapper(getActivity()).execute();
 
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
@@ -70,14 +72,14 @@ public class EmissionsFragment extends Fragment {
                     return fixedRentUsdTab;
                 case 1:
                     EmissionsFragmentTab fixedRentDopTab = new EmissionsFragmentTab();
-                    args.putString("info", LocalStorage.EMISSIONS_FIXED_RENT_DOP);
+                    args.putString("info", LocalStorage.EMISSIONS_VARIABLE_RENT_DOP);
                     fixedRentDopTab.setArguments(args);
                     return fixedRentDopTab;
                 case 2:
-                    EmissionsFragmentTab variableRentDopTab = new EmissionsFragmentTab();
+                    EmissionsFragmentTab variableRent = new EmissionsFragmentTab();
                     args.putString("info", LocalStorage.EMISSIONS_VARIABLE_RENT_DOP);
-                    variableRentDopTab.setArguments(args);
-                    return variableRentDopTab;
+                    variableRent.setArguments(args);
+                    return variableRent;
                 default:
                     return null;
 
@@ -86,7 +88,7 @@ public class EmissionsFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
 
         @Override

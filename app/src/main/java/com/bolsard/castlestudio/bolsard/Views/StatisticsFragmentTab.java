@@ -10,7 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
-import com.bolsard.castlestudio.bolsard.Data.RecyclerAdapter;
+import com.bolsard.castlestudio.bolsard.Data.EmissionsRecyclerAdapter;
+import com.bolsard.castlestudio.bolsard.Data.StatisticsRecyclerAdapter;
 import com.bolsard.castlestudio.bolsard.R;
 
 /**
@@ -27,7 +28,8 @@ public class StatisticsFragmentTab extends Fragment{
         //Setup an instance of LocalStorage to fetch the data locally
         LocalStorage ls = new LocalStorage(getActivity());
         //Set the RecyclerView adapter
-        mRecyclerViewTab.setAdapter(new RecyclerAdapter(ls.get(getArguments().getString("info")),ls.context));
+        String extra = getArguments().getString("info");
+        mRecyclerViewTab.setAdapter(new StatisticsRecyclerAdapter(ls.getStatisticResult(extra),ls.context));
         return rootView;
     }
 

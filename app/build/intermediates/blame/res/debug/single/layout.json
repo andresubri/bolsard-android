@@ -132,6 +132,10 @@
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/statistics_list_element.xml",
+        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/statistics_list_element.xml"
+    },
+    {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_layout_snackbar_include.xml"
     },
@@ -142,6 +146,10 @@
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/nav_header_main.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/nav_header_main.xml"
+    },
+    {
+        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/emissions_list_element.xml",
+        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/emissions_list_element.xml"
     },
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
@@ -198,10 +206,6 @@
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/fragment_tabs.xml",
         "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/fragment_tabs.xml"
-    },
-    {
-        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/list_element.xml",
-        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/layout/list_element.xml"
     },
     {
         "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",

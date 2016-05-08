@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.bolsard.castlestudio.bolsard.Data.EmissionsScrapper;
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
 import com.bolsard.castlestudio.bolsard.Data.StatisticsScrapper;
 import com.bolsard.castlestudio.bolsard.R;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity
         //Setup NavigationView
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        //new StatisticsScrapper(this).execute();
+        new StatisticsScrapper(this).execute();
+        new EmissionsScrapper(this).execute();
     }
 
     @Override

@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
 import com.bolsard.castlestudio.bolsard.Data.EmissionsScrapper;
+import com.bolsard.castlestudio.bolsard.Data.StatisticsScrapper;
 import com.bolsard.castlestudio.bolsard.R;
 
 /**
@@ -29,7 +30,6 @@ public class StatisticsFragment extends Fragment {
         mViewPager = (ViewPager) rootView.findViewById(R.id.container);
         mViewPager.setAdapter(new SectionsPagerAdapter(getChildFragmentManager()));
         //Get the data from the server
-        new EmissionsScrapper(getActivity()).execute();
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         return rootView;
@@ -62,24 +62,34 @@ public class StatisticsFragment extends Fragment {
             Bundle args = new Bundle();
             switch (position) {
                 case 0:
-                    StatisticsFragmentTab fixedRentTab = new StatisticsFragmentTab();
-                    args.putString("info", LocalStorage.EMISSIONS_FIXED_RENT_DOP);
-                    fixedRentTab.setArguments(args);
-                    return fixedRentTab;
+                    StatisticsFragmentTab fixedRentUsdTab = new StatisticsFragmentTab();
+                    args.putString("info", LocalStorage.STATISTICS_FIXED_RENT_DOP);
+                    fixedRentUsdTab.setArguments(args);
+                    return fixedRentUsdTab;
                 case 1:
-                    StatisticsFragmentTab invesmentFoundsTab = new StatisticsFragmentTab();
-                    args.putString("info", LocalStorage.EMISSIONS_VARIABLE_RENT_DOP);
-                    invesmentFoundsTab.setArguments(args);
-                    return invesmentFoundsTab;
+                    StatisticsFragmentTab fixedRentDopTab = new StatisticsFragmentTab();
+                    args.putString("info", LocalStorage.STATISTICS_FIXED_RENT_USD);
+                    fixedRentDopTab.setArguments(args);
+                    return fixedRentDopTab;
+                case 2:
+                    StatisticsFragmentTab variableRentDopTab = new StatisticsFragmentTab();
+                    args.putString("info", LocalStorage.STATISTICS_INVESTMENT_FOUNDS_DOP);
+                    variableRentDopTab.setArguments(args);
+                    return variableRentDopTab;
+
+                case 3:
+                    StatisticsFragmentTab variableRentUsdTab = new StatisticsFragmentTab();
+                    args.putString("info", LocalStorage.STATISTICS_INVESTMENT_FOUNDS_USD);
+                    variableRentUsdTab.setArguments(args);
+                    return variableRentUsdTab;
                 default:
                     return null;
-
             }
         }
 
         @Override
         public int getCount() {
-            return 2;
+            return 4;
         }
 
         @Override
@@ -87,9 +97,13 @@ public class StatisticsFragment extends Fragment {
             //Sets the title for each tab
             switch (position) {
                 case 0:
-                    return "Renta Fija";
+                    return "Renta Fija RD$";
                 case 1:
-                    return "Fondos de Inversion";
+                    return "Renta Fija US$";
+                case 2:
+                    return "Fondos de Inversion RD$";
+                case 3:
+                    return "Fondos de Inversion US$";
             }
             return null;
         }

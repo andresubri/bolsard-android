@@ -79,9 +79,55 @@ public class LocalStorage {
         }
     }
 
-    public List<?> get(String keyName){
+    public List<StatisticResult> getStatisticResult(String keyName){
         Gson gson = new Gson();
+        switch (keyName){
+        case STATISTICS_FIXED_RENT_DOP:
+        if(settings.contains(STATISTICS_FIXED_RENT_DOP)) {
+            String jsonResult = settings.getString(STATISTICS_FIXED_RENT_DOP, null);
+            StatisticResult[] items = gson.fromJson(jsonResult, StatisticResult[].class);
+            statisticResultList = Arrays.asList(items);
+            statisticResultList = new ArrayList<>(statisticResultList);
+            return statisticResultList;
+        }else
+            return null;
 
+        case STATISTICS_FIXED_RENT_USD:
+        if(settings.contains(STATISTICS_FIXED_RENT_USD)) {
+            String jsonResult = settings.getString(STATISTICS_FIXED_RENT_USD, null);
+            StatisticResult[] items = gson.fromJson(jsonResult, StatisticResult[].class);
+            statisticResultList = Arrays.asList(items);
+            statisticResultList = new ArrayList<>(statisticResultList);
+            return statisticResultList;
+        }else
+            return null;
+
+        case STATISTICS_INVESTMENT_FOUNDS_DOP:
+        if(settings.contains(STATISTICS_INVESTMENT_FOUNDS_DOP)) {
+            String jsonResult = settings.getString(STATISTICS_INVESTMENT_FOUNDS_DOP, null);
+            StatisticResult[] items = gson.fromJson(jsonResult, StatisticResult[].class);
+            statisticResultList = Arrays.asList(items);
+            statisticResultList = new ArrayList<>(statisticResultList);
+            return statisticResultList;
+        }else
+            return null;
+
+        case STATISTICS_INVESTMENT_FOUNDS_USD:
+        if(settings.contains(STATISTICS_INVESTMENT_FOUNDS_USD)) {
+            String jsonResult = settings.getString(STATISTICS_INVESTMENT_FOUNDS_USD, null);
+            StatisticResult[] items = gson.fromJson(jsonResult, StatisticResult[].class);
+            statisticResultList = Arrays.asList(items);
+            statisticResultList = new ArrayList<>(statisticResultList);
+            return statisticResultList;
+        }else
+            return null;
+
+        }
+        return statisticResultList;
+    }
+
+    public List<EmissionsResult> getEmissionsResult(String keyName){
+        Gson gson = new Gson();
         switch (keyName){
             case EMISSIONS_FIXED_RENT_DOP:
                 if(settings.contains(EMISSIONS_FIXED_RENT_DOP)) {
@@ -113,46 +159,6 @@ public class LocalStorage {
                     return emissionsResultList;
                 }else
                     return null;
-            case STATISTICS_FIXED_RENT_DOP:
-                if(settings.contains(STATISTICS_FIXED_RENT_DOP)) {
-                    String jsonResult = settings.getString(STATISTICS_FIXED_RENT_DOP, null);
-                    StatisticResult[] items = gson.fromJson(jsonResult, StatisticResult[].class);
-                    statisticResultList = Arrays.asList(items);
-                    statisticResultList = new ArrayList<>(statisticResultList);
-                    return emissionsResultList;
-                }else
-                    return null;
-
-            case STATISTICS_FIXED_RENT_USD:
-                if(settings.contains(STATISTICS_FIXED_RENT_USD)) {
-                    String jsonResult = settings.getString(STATISTICS_FIXED_RENT_USD, null);
-                    StatisticResult[] items = gson.fromJson(jsonResult, StatisticResult[].class);
-                    statisticResultList = Arrays.asList(items);
-                    statisticResultList = new ArrayList<>(statisticResultList);
-                    return emissionsResultList;
-                }else
-                    return null;
-
-            case STATISTICS_INVESTMENT_FOUNDS_DOP:
-                if(settings.contains(STATISTICS_INVESTMENT_FOUNDS_DOP)) {
-                    String jsonResult = settings.getString(STATISTICS_INVESTMENT_FOUNDS_DOP, null);
-                    StatisticResult[] items = gson.fromJson(jsonResult, StatisticResult[].class);
-                    statisticResultList = Arrays.asList(items);
-                    statisticResultList = new ArrayList<>(statisticResultList);
-                    return emissionsResultList;
-                }else
-                    return null;
-
-            case STATISTICS_INVESTMENT_FOUNDS_USD:
-                if(settings.contains(STATISTICS_INVESTMENT_FOUNDS_USD)) {
-                    String jsonResult = settings.getString(STATISTICS_INVESTMENT_FOUNDS_USD, null);
-                    StatisticResult[] items = gson.fromJson(jsonResult, StatisticResult[].class);
-                    statisticResultList = Arrays.asList(items);
-                    statisticResultList = new ArrayList<>(statisticResultList);
-                    return emissionsResultList;
-                }else
-                    return null;
-
         }
         return emissionsResultList;
     }

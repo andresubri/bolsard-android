@@ -10,8 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
+import com.bolsard.castlestudio.bolsard.Data.StatisticsRecyclerAdapter;
 import com.bolsard.castlestudio.bolsard.R;
-import com.bolsard.castlestudio.bolsard.Data.RecyclerAdapter;
+import com.bolsard.castlestudio.bolsard.Data.EmissionsRecyclerAdapter;
 
 /**
  * Created by andriusic on 01/05/16.
@@ -27,7 +28,8 @@ public class EmissionsFragmentTab extends Fragment{
         //Setup an instance of LocalStorage to fetch the data locally
         LocalStorage ls = new LocalStorage(getActivity());
         //Set the RecyclerView adapter
-        mRecyclerViewTab.setAdapter(new RecyclerAdapter(ls.get(getArguments().getString("info")),ls.context));
+        String extra = getArguments().getString("info");
+        mRecyclerViewTab.setAdapter(new EmissionsRecyclerAdapter(ls.getEmissionsResult(extra),ls.context));
         return rootView;
     }
 }

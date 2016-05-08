@@ -16,26 +16,26 @@ import java.util.List;
 /**
  * Created by andriusic on 30/04/16.
  */
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
+public class EmissionsRecyclerAdapter extends RecyclerView.Adapter<EmissionsRecyclerAdapter.ViewHolder> {
     public List<EmissionsResult> emissionsResultList;
     private int rowLayout;
     public Context mContext;
 
-    public RecyclerAdapter(List<EmissionsResult> emissionsResultList, Context mContext) {
+    public EmissionsRecyclerAdapter(List<EmissionsResult> emissionsResultList, Context mContext) {
         this.emissionsResultList = emissionsResultList;
         this.mContext = mContext;
-        this.rowLayout = R.layout.list_element;
+        this.rowLayout = R.layout.emissions_list_element;
     }
 
     @Override
-    public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public EmissionsRecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
-        final RecyclerAdapter.ViewHolder vh = new ViewHolder(v);
+        final EmissionsRecyclerAdapter.ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(EmissionsRecyclerAdapter.ViewHolder holder, int position) {
         //Bind the data to the view
     EmissionsResult emissionsResult = emissionsResultList.get(position);
     holder.code.setText(emissionsResult.getCode());
@@ -62,7 +62,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             lastNegotiated = (TextView)itemView.findViewById(R.id.last_negotiated);
             price = (TextView)itemView.findViewById(R.id.price_percentage);
             tir = (TextView)itemView.findViewById(R.id.tir_percentage);
-            cardView = (CardView)itemView.findViewById(R.id.result_card);
+            cardView = (CardView)itemView.findViewById(R.id.emissions_result_card);
         }
     }
 }
