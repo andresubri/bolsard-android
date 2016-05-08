@@ -72,7 +72,7 @@ public class EmissionsFragment extends Fragment {
                     return fixedRentUsdTab;
                 case 1:
                     EmissionsFragmentTab fixedRentDopTab = new EmissionsFragmentTab();
-                    args.putString("info", LocalStorage.EMISSIONS_VARIABLE_RENT_DOP);
+                    args.putString("info", LocalStorage.EMISSIONS_FIXED_RENT_DOP);
                     fixedRentDopTab.setArguments(args);
                     return fixedRentDopTab;
                 case 2:
@@ -88,7 +88,7 @@ public class EmissionsFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 4;
+            return 3;
         }
 
         @Override

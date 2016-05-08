@@ -41,7 +41,7 @@ public class StatisticsRecyclerAdapter extends RecyclerView.Adapter<StatisticsRe
         holder.code.setText(emissionsResult.getCode());
         holder.tax.setText(emissionsResult.getTax());
         holder.price.setText(String.valueOf(emissionsResult.getPrice()));
-        holder.expDate.setText(String.valueOf(emissionsResult.getPrice()));
+        holder.expDate.setText(String.valueOf(emissionsResult.getExpDate()));
     }
 
     @Override
