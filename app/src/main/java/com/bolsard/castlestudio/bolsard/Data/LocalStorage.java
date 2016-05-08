@@ -26,10 +26,8 @@ public class LocalStorage {
         this.context = context;
         settings = context.getSharedPreferences(PREFS_NAME,
                 Context.MODE_PRIVATE);    }
-
     public void save(List<Result> saveList, String keyName){
         SharedPreferences.Editor editor;
-
         Gson gson = new Gson();
         String jsonResult = gson.toJson(saveList);
         switch (keyName){

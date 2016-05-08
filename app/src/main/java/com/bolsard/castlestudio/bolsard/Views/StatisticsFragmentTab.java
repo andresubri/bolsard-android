@@ -19,12 +19,15 @@ import com.bolsard.castlestudio.bolsard.R;
 public class StatisticsFragmentTab extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //Displays the given data for each tab in the StatisticsFragment fragment
         View rootView = inflater.inflate(R.layout.fragment_tab_details, container, false);
-        RecyclerView mRecyclerViewTab1 = (RecyclerView) rootView.findViewById(R.id.result_recycler);
-        mRecyclerViewTab1.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecyclerViewTab1.setItemAnimator(new DefaultItemAnimator());
+        RecyclerView mRecyclerViewTab = (RecyclerView) rootView.findViewById(R.id.result_recycler);
+        mRecyclerViewTab.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerViewTab.setItemAnimator(new DefaultItemAnimator());
+        //Setup an instance of LocalStorage to fetch the data locally
         LocalStorage ls = new LocalStorage(getActivity());
-        mRecyclerViewTab1.setAdapter(new RecyclerAdapter(ls.get(getArguments().getString("info")),ls.context));
+        //Set the RecyclerView adapter
+        mRecyclerViewTab.setAdapter(new RecyclerAdapter(ls.get(getArguments().getString("info")),ls.context));
         return rootView;
     }
 

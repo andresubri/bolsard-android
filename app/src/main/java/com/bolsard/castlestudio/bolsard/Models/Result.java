@@ -9,6 +9,7 @@ package com.bolsard.castlestudio.bolsard.Models;
  *
  * @author malmonte
  */
+//Result model to represent the data extracted
 public class Result {
     private String code;
     private String publisher;

@@ -18,21 +18,20 @@ import com.bolsard.castlestudio.bolsard.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    final Context CONTEXT = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Setup the view
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
+        //Setup Drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
+        //Setup NavigationView
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //Closes Drawer if open
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        //Loads the corresponding fragment when selecting the option
         int id = item.getItemId();
 
         if (id == R.id.nav_stadistics) {
@@ -92,14 +93,13 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
     public void displayView(android.support.v4.app.Fragment fragment){
+        //Loads the fragment and replaces the placeholder in the given instance
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.frame_container, fragment).commit();
-
-
         } else {
-            // error in creating fragment
+            //Error in creating fragment
             Log.e("MainActivity", "Error in creating fragment");
         }
     }

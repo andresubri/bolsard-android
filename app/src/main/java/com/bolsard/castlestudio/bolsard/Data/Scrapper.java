@@ -33,7 +33,7 @@ public class Scrapper extends AsyncTask<Void,Void,List<List>> {
 
     @Override
     protected List<List> doInBackground(Void... params) {
-        // TODO code application logic here
+        //Setup the scrapping process
         String url = "http://bolsard.com/";
         try {
             System.out.println("Connecting to the server...");

@@ -36,6 +36,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, int position) {
+        //Bind the data to the view
     Result result = resultList.get(position);
     holder.code.setText(result.getCode());
     holder.publisher.setText(result.getPublisher());
@@ -51,7 +52,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-
+        //Setup the placeholder for the RecyclerView
         public TextView code,publisher,lastNegotiated,price,tir;
         public CardView cardView;
         public ViewHolder(View itemView) {

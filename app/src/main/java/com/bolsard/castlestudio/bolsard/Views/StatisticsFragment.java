@@ -20,23 +20,17 @@ import com.bolsard.castlestudio.bolsard.R;
  * Created by andriusic on 07/05/16.
  */
 public class StatisticsFragment extends Fragment {
-    private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
-    private Context context;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_tabs, container, false);
-
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
-//        mSectionsPagerAdapter = new SectionsPagerAdapter(getChildFragmentManager());
-
-        // Set up the ViewPager with the sections adapter.
+        //Primary sections of the fragment.
+        //Setup the ViewPager with the sections adapter.
         mViewPager = (ViewPager) rootView.findViewById(R.id.container);
         mViewPager.setAdapter(new SectionsPagerAdapter(getChildFragmentManager()));
+        //Get the data from the server
         new Scrapper(getActivity()).execute();
-
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         return rootView;
@@ -65,6 +59,7 @@ public class StatisticsFragment extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
+            //Returns a new fragment for each tab with its own data
             Bundle args = new Bundle();
             switch (position) {
                 case 0:
@@ -90,6 +85,7 @@ public class StatisticsFragment extends Fragment {
 
         @Override
         public CharSequence getPageTitle(int position) {
+            //Sets the title for each tab
             switch (position) {
                 case 0:
                     return "Renta Fija";
