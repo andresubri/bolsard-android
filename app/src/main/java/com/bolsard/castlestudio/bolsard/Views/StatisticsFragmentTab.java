@@ -16,7 +16,7 @@ import com.bolsard.castlestudio.bolsard.R;
 /**
  * Created by andriusic on 07/05/16.
  */
-public class StatisticsFragmentTab1 extends Fragment{
+public class StatisticsFragmentTab extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_tab_details, container, false);
@@ -24,7 +24,7 @@ public class StatisticsFragmentTab1 extends Fragment{
         mRecyclerViewTab1.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerViewTab1.setItemAnimator(new DefaultItemAnimator());
         LocalStorage ls = new LocalStorage(getActivity());
-        mRecyclerViewTab1.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.FIXED_RENT_DOP),ls.context));
+        mRecyclerViewTab1.setAdapter(new RecyclerAdapter(ls.get(getArguments().getString("info")),ls.context));
         return rootView;
     }
 

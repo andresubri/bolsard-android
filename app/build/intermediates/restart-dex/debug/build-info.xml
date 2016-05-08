@@ -4,26 +4,26 @@
     api-level="16"
     density="xhdpi"
     format="7"
-    timestamp="61272355790873" >
+    timestamp="74427272182527" >
 
     <task
         name="javac"
-        duration="112" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="29" />
+        duration="0" />
     <task
         name="verifier"
-        duration="18" />
+        duration="0" />
 
     <artifact
         location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="61272355790873" >
+    <build timestamp="74427272182527" >
         <artifact
             location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />

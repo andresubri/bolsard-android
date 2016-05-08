@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
 import com.bolsard.castlestudio.bolsard.Data.Scrapper;
 import com.bolsard.castlestudio.bolsard.R;
 
@@ -64,13 +65,18 @@ public class StatisticsFragment extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
+            Bundle args = new Bundle();
             switch (position) {
                 case 0:
-                    StatisticsFragmentTab1 tab1 = new StatisticsFragmentTab1();
-                    return tab1;
+                    StatisticsFragmentTab fixedRentTab = new StatisticsFragmentTab();
+                    args.putString("info", LocalStorage.FIXED_RENT_DOP);
+                    fixedRentTab.setArguments(args);
+                    return fixedRentTab;
                 case 1:
-                    StatisticsFragmentTab2 tab2 = new StatisticsFragmentTab2();
-                    return tab2;
+                    StatisticsFragmentTab invesmentFoundsTab = new StatisticsFragmentTab();
+                    args.putString("info", LocalStorage.VARIABLE_RENT_DOP);
+                    invesmentFoundsTab.setArguments(args);
+                    return invesmentFoundsTab;
                 default:
                     return null;
 

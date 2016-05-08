@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
 import com.bolsard.castlestudio.bolsard.R;
 import com.bolsard.castlestudio.bolsard.Data.Scrapper;
 
@@ -65,16 +66,23 @@ public class EmissionsFragment extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
+            Bundle args = new Bundle();
             switch (position) {
                 case 0:
-                    EmissionsFragmentTab1 tab1 = new EmissionsFragmentTab1();
-                    return tab1;
+                    EmissionsFragmentTab fixedRentUsdTab = new EmissionsFragmentTab();
+                    args.putString("info", LocalStorage.FIXED_RENT_USD);
+                    fixedRentUsdTab.setArguments(args);
+                    return fixedRentUsdTab;
                 case 1:
-                    EmissionsFragmentTab2 tab2 = new EmissionsFragmentTab2();
-                    return tab2;
+                    EmissionsFragmentTab fixedRentDopTab = new EmissionsFragmentTab();
+                    args.putString("info", LocalStorage.FIXED_RENT_DOP);
+                    fixedRentDopTab.setArguments(args);
+                    return fixedRentDopTab;
                 case 2:
-                    EmissionsFragmentTab3 tab3 = new EmissionsFragmentTab3();
-                    return tab3;
+                    EmissionsFragmentTab variableRentDopTab = new EmissionsFragmentTab();
+                    args.putString("info", LocalStorage.VARIABLE_RENT_DOP);
+                    variableRentDopTab.setArguments(args);
+                    return variableRentDopTab;
                 default:
                     return null;
 

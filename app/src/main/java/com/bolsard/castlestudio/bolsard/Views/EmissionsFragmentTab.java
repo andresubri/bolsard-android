@@ -16,15 +16,17 @@ import com.bolsard.castlestudio.bolsard.Data.RecyclerAdapter;
 /**
  * Created by andriusic on 01/05/16.
  */
-public class EmissionsFragmentTab2 extends Fragment {
+public class EmissionsFragmentTab extends Fragment{
+    public String info;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_tab_details, container, false);
-        RecyclerView mRecyclerViewTab2 = (RecyclerView) rootView.findViewById(R.id.result_recycler);
-        mRecyclerViewTab2.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecyclerViewTab2.setItemAnimator(new DefaultItemAnimator());
+        RecyclerView mRecyclerViewTab1 = (RecyclerView) rootView.findViewById(R.id.result_recycler);
+        mRecyclerViewTab1.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerViewTab1.setItemAnimator(new DefaultItemAnimator());
         LocalStorage ls = new LocalStorage(getActivity());
-        mRecyclerViewTab2.setAdapter(new RecyclerAdapter(ls.get(LocalStorage.FIXED_RENT_DOP),ls.context));
+        mRecyclerViewTab1.setAdapter(new RecyclerAdapter(ls.get(getArguments().getString("info")),ls.context));
         return rootView;
     }
 }

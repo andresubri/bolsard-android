@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
 import com.bolsard.castlestudio.bolsard.R;
 
 public class MainActivity extends AppCompatActivity
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_stadistics) {
         StatisticsFragment statisticsFragment = new StatisticsFragment();
             displayView(statisticsFragment);
+            setTitle("Emisiones");
         } else if (id == R.id.nav_emissions) {
             EmissionsFragment emissionsFragment = new EmissionsFragment();
             displayView(emissionsFragment);
@@ -93,7 +95,7 @@ public class MainActivity extends AppCompatActivity
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.frame_container, fragment).commit();
-            setTitle("Emisiones");
+
 
         } else {
             // error in creating fragment
