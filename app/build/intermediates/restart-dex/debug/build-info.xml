@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-    api-level="16"
-    density="xhdpi"
+    api-level="23"
+    density="420dpi"
     format="7"
-    timestamp="11929539292209" >
+    timestamp="45657956508049" >
 
     <task
         name="javac"
-        duration="1877" />
+        duration="126" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="148" />
+        duration="0" />
     <task
         name="verifier"
-        duration="83" />
+        duration="0" />
 
     <artifact
-        location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="11929539292209" >
+    <build timestamp="34570393917638" >
         <artifact
             location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="45012011338848"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="45548752564523"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="45657956508049" >
+        <artifact
+            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>
