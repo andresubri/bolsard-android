@@ -2388,15 +2388,16 @@ containing a value of this type.
         public static final int design_snackbar_background=0x7f02004c;
         public static final int ic_action_chart_areaspline=0x7f02004d;
         public static final int ic_action_file_chart=0x7f02004e;
-        public static final int ic_info_black_24dp=0x7f02004f;
-        public static final int ic_menu_camera=0x7f020051;
-        public static final int ic_menu_gallery=0x7f020052;
-        public static final int ic_menu_manage=0x7f020053;
-        public static final int ic_menu_send=0x7f020054;
-        public static final int ic_menu_share=0x7f020055;
-        public static final int ic_menu_slideshow=0x7f020056;
-        public static final int notification_template_icon_bg=0x7f020057;
-        public static final int side_nav_bar=0x7f020050;
+        public static final int ic_file_chart=0x7f02004f;
+        public static final int ic_info_black_24dp=0x7f020050;
+        public static final int ic_menu_camera=0x7f020052;
+        public static final int ic_menu_gallery=0x7f020053;
+        public static final int ic_menu_manage=0x7f020054;
+        public static final int ic_menu_send=0x7f020055;
+        public static final int ic_menu_share=0x7f020056;
+        public static final int ic_menu_slideshow=0x7f020057;
+        public static final int notification_template_icon_bg=0x7f020058;
+        public static final int side_nav_bar=0x7f020051;
     }
     public static final class id {
         public static final int action0=0x7f0c0083;
