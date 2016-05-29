@@ -19,17 +19,22 @@
 
         <TextView
             android:id="@+id/statistic_code"
-            android:layout_width="wrap_content"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:text="Code"
+            android:textColor="@android:color/primary_text_light"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:singleLine="true"/>
+            android:singleLine="true"
+
+            />
 
         <TextView
             android:id="@+id/statistic_tax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tax"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/primary_text_light"
             android:layout_alignParentEnd="true"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -39,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/statistic_tax"
+            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:text="Price"/>
 

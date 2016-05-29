@@ -65,13 +65,13 @@ public class EmissionsScrapper extends AsyncTask<Void,Void,List<List>> {
                             if (td.text().contains(".")) {
                                 continue;
                             }
-                            fixedRentDopList.get(pos).setLastNegociated(Integer.valueOf(td.text().replace(",", "")));
+                            fixedRentDopList.get(pos).setLastNegociated(td.text());
                             break;
                         case 3:
-                            fixedRentDopList.get(pos).setPricePercentage(Float.valueOf(td.text().replace(",", "")));
+                            fixedRentDopList.get(pos).setPricePercentage(td.text());
                             break;
                         case 4:
-                            fixedRentDopList.get(pos).setTirPercentage(Float.valueOf(td.text().replace(",", "")));
+                            fixedRentDopList.get(pos).setTirPercentage(td.text());
                             break;
                     }
                     cnt++;
@@ -94,13 +94,13 @@ public class EmissionsScrapper extends AsyncTask<Void,Void,List<List>> {
                             if (td.text().contains(".")) {
                                 continue;
                             }
-                            fixedRentUsdList.get(pos).setLastNegociated(Integer.valueOf(td.text().replace(",", "")));
+                            fixedRentUsdList.get(pos).setLastNegociated(td.text());
                             break;
                         case 3:
-                            fixedRentUsdList.get(pos).setPricePercentage(Float.valueOf(td.text().replace(",", "")));
+                            fixedRentUsdList.get(pos).setPricePercentage(td.text());
                             break;
                         case 4:
-                            fixedRentUsdList.get(pos).setTirPercentage(Float.valueOf(td.text().replace(",", "")));
+                            fixedRentUsdList.get(pos).setTirPercentage(td.text());
                             break;
                     }
                     cnt++;
@@ -123,13 +123,13 @@ public class EmissionsScrapper extends AsyncTask<Void,Void,List<List>> {
                             if (td.text().contains(".")) {
                                 continue;
                             }
-                            variableRentList.get(pos).setLastNegociated(Integer.valueOf(td.text().replace(",", "")));
+                            variableRentList.get(pos).setLastNegociated(td.text());
                             break;
                         case 3:
-                            variableRentList.get(pos).setPricePercentage(Float.valueOf(td.text().replace(",", "")));
+                            variableRentList.get(pos).setPricePercentage(td.text());
                             break;
                         case 4:
-                            variableRentList.get(pos).setTirPercentage(Float.valueOf(td.text().replace(",", "")));
+                            variableRentList.get(pos).setTirPercentage(td.text());
                             break;
                     }
                     cnt++;

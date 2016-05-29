@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity
         new EmissionsScrapper(this).execute();
     }
 
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -81,12 +82,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_stadistics) {
-        StatisticsFragment statisticsFragment = new StatisticsFragment();
-            displayView(statisticsFragment);
+            displayView(new StatisticsFragment());
             setTitle(R.string.navigation_drawer_first_option);
-        } else if (id == R.id.nav_emissions) {
-            EmissionsFragment emissionsFragment = new EmissionsFragment();
-            displayView(emissionsFragment);
+        } else if (id == R.id.nav_emissions) {displayView(new EmissionsFragment());
             setTitle(R.string.navigation_drawer_second_option);
         } else if (id == R.id.nav_info) {
             setTitle(R.string.navigation_drawer_third_option);

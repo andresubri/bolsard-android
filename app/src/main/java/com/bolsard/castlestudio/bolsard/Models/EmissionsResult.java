@@ -13,9 +13,9 @@ package com.bolsard.castlestudio.bolsard.Models;
 public class EmissionsResult {
     private String code;
     private String publisher;
-    private int lastNegociated;
-    private float pricePercentage;
-    private float tirPercentage;
+    private String lastNegociated;
+    private String pricePercentage;
+    private String tirPercentage;
 
     public String getCode() {
         return code;
@@ -33,27 +33,27 @@ public class EmissionsResult {
         this.publisher = publisher;
     }
 
-    public int getLastNegociated() {
+    public String getLastNegociated() {
         return lastNegociated;
     }
 
-    public void setLastNegociated(int lastNegociated) {
+    public void setLastNegociated(String lastNegociated) {
         this.lastNegociated = lastNegociated;
     }
 
-    public float getPricePercentage() {
+    public String getPricePercentage() {
         return pricePercentage;
     }
 
-    public void setPricePercentage(float pricePercentage) {
+    public void setPricePercentage(String pricePercentage) {
         this.pricePercentage = pricePercentage;
     }
 
-    public float getTirPercentage() {
+    public String getTirPercentage() {
         return tirPercentage;
     }
 
-    public void setTirPercentage(float tirPercentage) {
+    public void setTirPercentage(String tirPercentage) {
         this.tirPercentage = tirPercentage;
     }
 }
