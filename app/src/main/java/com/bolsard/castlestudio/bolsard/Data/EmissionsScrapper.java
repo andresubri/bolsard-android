@@ -6,9 +6,14 @@
 package com.bolsard.castlestudio.bolsard.Data;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.provider.Settings;
+import android.support.design.widget.Snackbar;
+import android.view.View;
 
 import com.bolsard.castlestudio.bolsard.Models.EmissionsResult;
+import com.bolsard.castlestudio.bolsard.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -152,10 +157,11 @@ public class EmissionsScrapper extends AsyncTask<Void,Void,List<List>> {
 
     @Override
     protected void onPostExecute(List<List> lists) {
-      LocalStorage ls = new LocalStorage(context);
-        ls.save(lists.get(0),LocalStorage.EMISSIONS_FIXED_RENT_DOP);
-        ls.save(lists.get(1),LocalStorage.EMISSIONS_FIXED_RENT_USD);
-        ls.save(lists.get(2),LocalStorage.EMISSIONS_VARIABLE_RENT_DOP);
-
+        if(!lists.isEmpty()) {
+            LocalStorage ls = new LocalStorage(context);
+            ls.save(lists.get(0), LocalStorage.EMISSIONS_FIXED_RENT_DOP);
+            ls.save(lists.get(1), LocalStorage.EMISSIONS_FIXED_RENT_USD);
+            ls.save(lists.get(2), LocalStorage.EMISSIONS_VARIABLE_RENT_DOP);
+        }
     }
 }

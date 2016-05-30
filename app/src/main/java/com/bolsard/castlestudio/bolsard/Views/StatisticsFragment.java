@@ -10,10 +10,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
-import com.bolsard.castlestudio.bolsard.Data.EmissionsScrapper;
-import com.bolsard.castlestudio.bolsard.Data.StatisticsScrapper;
 import com.bolsard.castlestudio.bolsard.R;
 
 /**

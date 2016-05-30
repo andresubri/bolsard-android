@@ -12,7 +12,7 @@
         jar="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="2e353c5b06a26460417ada3044f4b86e6dabd450">
+        sha1="c22f1497c890852a2113c1f8eb4fe7d28b5a8449">
         <dex dex="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_03c77672a2ce497935cff7271014e9fd361cb289/classes.dex" />
     </item>
     <item
@@ -68,7 +68,7 @@
         jar="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="0fb4fdb969074723710fb7a2f73dcb350937ce15">
+        sha1="10bf9f9d0a0444792f1cacb8f47a6427cb205dd1">
         <dex dex="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b2617f64c9f6f7416697dc5c34017686ae22b8a2/classes.dex" />
     </item>
     <item

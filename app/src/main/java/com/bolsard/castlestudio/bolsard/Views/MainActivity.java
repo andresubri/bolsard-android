@@ -2,8 +2,12 @@ package com.bolsard.castlestudio.bolsard.Views;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.support.design.widget.NavigationView;
@@ -15,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.bolsard.castlestudio.bolsard.Data.EmissionsScrapper;
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
@@ -23,12 +28,14 @@ import com.bolsard.castlestudio.bolsard.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Setup the view
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //Setup Drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -43,10 +50,28 @@ public class MainActivity extends AppCompatActivity
         //navigationView.setCheckedItem(0);
         displayView(new StatisticsFragment());
         setTitle(R.string.navigation_drawer_first_option);
-        new StatisticsScrapper(this).execute();
-        new EmissionsScrapper(this).execute();
+        fetchData();
     }
+    public void fetchData(){
+        ConnectivityManager cm =
+                (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
 
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if(activeNetwork != null && activeNetwork.isConnected()){
+            new StatisticsScrapper(this,toolbar).execute();
+            new EmissionsScrapper(this).execute();
+        }else{
+            Snackbar.make(toolbar, R.string.connection_error_message, Snackbar.LENGTH_LONG)
+                    .setAction(R.string.connection_settings, new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                        }
+                    })
+                    .setActionTextColor(getResources().getColor(android.R.color.holo_red_light ))
+                    .show();
+        }
+    }
 
     @Override
     public void onBackPressed() {

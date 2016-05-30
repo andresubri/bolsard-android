@@ -10,12 +10,8 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
-import com.bolsard.castlestudio.bolsard.Data.StatisticsScrapper;
-import com.bolsard.castlestudio.bolsard.Models.EmissionsResult;
 import com.bolsard.castlestudio.bolsard.R;
-import com.bolsard.castlestudio.bolsard.Data.EmissionsScrapper;
 
 /**
  * Created by andriusic on 05/05/16.
@@ -32,8 +28,6 @@ public class EmissionsFragment extends Fragment {
         //Position the ViewPager on the second tab
         mViewPager.setCurrentItem(1);
         //Get the data from the server
-        new StatisticsScrapper(getActivity()).execute();
-
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         return rootView;

@@ -3,14 +3,14 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="navigation_drawer_first_option">Estadisticas</string>
+    <string name="navigation_drawer_first_option">Estadísticas</string>
     <string name="navigation_drawer_second_option">Emisiones</string>
-    <string name="navigation_drawer_third_option">Informacion</string>
+    <string name="navigation_drawer_third_option">Información</string>
+    <string name="connection_error_message">Error de conexión. La información
+        puede no estar actualizada</string>
+    <string name="connection_error_fetch">Error obteniendo datos. Revise su conexión</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="connection_settings">Ir a ajustes</string>
+    <string name="action_settings">Ajustes</string>
     <string name="title_activity_tabs_layout">Bolsa RD</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 </resources>

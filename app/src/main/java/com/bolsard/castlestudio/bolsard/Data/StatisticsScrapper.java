@@ -1,9 +1,15 @@
 package com.bolsard.castlestudio.bolsard.Data;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.provider.Settings;
+import android.support.design.widget.Snackbar;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.bolsard.castlestudio.bolsard.Models.StatisticResult;
+import com.bolsard.castlestudio.bolsard.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,8 +28,10 @@ import org.jsoup.select.Elements;
  */
 public class StatisticsScrapper extends AsyncTask<Void,Void,List<List>> {
     Context context;
-    public StatisticsScrapper(Context context) {
+    Toolbar toolbar;
+    public StatisticsScrapper(Context context, Toolbar toolbar) {
         this.context = context;
+        this.toolbar = toolbar;
     }
 
     @Override
@@ -95,10 +103,23 @@ public class StatisticsScrapper extends AsyncTask<Void,Void,List<List>> {
 
     @Override
     protected void onPostExecute(List<List> lists) {
-        LocalStorage ls = new LocalStorage(context);
-        ls.save(lists.get(0),LocalStorage.STATISTICS_FIXED_RENT_DOP);
-        ls.save(lists.get(1),LocalStorage.STATISTICS_FIXED_RENT_USD);
-        ls.save(lists.get(2),LocalStorage.STATISTICS_INVESTMENT_FOUNDS_DOP);
-        ls.save(lists.get(3),LocalStorage.STATISTICS_INVESTMENT_FOUNDS_USD);
+        if(!lists.isEmpty()){
+            LocalStorage ls = new LocalStorage(context);
+            ls.save(lists.get(0),LocalStorage.STATISTICS_FIXED_RENT_DOP);
+            ls.save(lists.get(1),LocalStorage.STATISTICS_FIXED_RENT_USD);
+            ls.save(lists.get(2),LocalStorage.STATISTICS_INVESTMENT_FOUNDS_DOP);
+            ls.save(lists.get(3),LocalStorage.STATISTICS_INVESTMENT_FOUNDS_USD);
+
+        }else {
+            Snackbar.make(toolbar, R.string.connection_error_fetch, Snackbar.LENGTH_LONG)
+                    .setAction(R.string.connection_settings, new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            context.startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                        }
+                    })
+                    .setActionTextColor(context.getResources().getColor(android.R.color.holo_red_light ))
+                    .show();
+        }
     }
 }
