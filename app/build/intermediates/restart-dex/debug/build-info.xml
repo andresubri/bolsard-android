@@ -4,48 +4,29 @@
     api-level="23"
     density="560dpi"
     format="7"
-    timestamp="2781948453526" >
+    timestamp="6254249191725" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="676" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="110" />
     <task
         name="verifier"
-        duration="0" />
+        duration="23" />
 
     <artifact
-        location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/resources-debug.ap_"
-        type="RESOURCES" />
+        location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="804021250984" >
+    <build timestamp="6254249191725" >
         <artifact
             location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="1866140049467" >
-        <artifact
-            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="2781948453526" >
-        <artifact
-            location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
     </build>
 
 </instant-run>

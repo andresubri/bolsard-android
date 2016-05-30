@@ -1,6 +1,8 @@
 package com.bolsard.castlestudio.bolsard.Views;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
@@ -12,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.bolsard.castlestudio.bolsard.Data.EmissionsScrapper;
 import com.bolsard.castlestudio.bolsard.Data.LocalStorage;
@@ -36,6 +39,10 @@ public class MainActivity extends AppCompatActivity
         //Setup NavigationView
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.getMenu().getItem(0).setChecked(true);
+        //navigationView.setCheckedItem(0);
+        displayView(new StatisticsFragment());
+        setTitle(R.string.navigation_drawer_first_option);
         new StatisticsScrapper(this).execute();
         new EmissionsScrapper(this).execute();
     }
@@ -71,6 +78,13 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    public void buttonSiteProperties(View view){
+        String url = "http://www.castlestudio.me";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -84,6 +98,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_emissions) {displayView(new EmissionsFragment());
             setTitle(R.string.navigation_drawer_second_option);
         } else if (id == R.id.nav_info) {
+            displayView(new InfoFragment());
             setTitle(R.string.navigation_drawer_third_option);
         }
 
