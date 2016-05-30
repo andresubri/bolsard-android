@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="armeabi-v7a,armeabi"
     api-level="23"
-    density="420dpi"
+    density="560dpi"
     format="7"
-    timestamp="18806496891430" >
+    timestamp="30179027769863" >
 
     <task
         name="javac"
-        duration="362" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="126" />
+        duration="0" />
     <task
         name="verifier"
-        duration="7" />
+        duration="0" />
 
     <artifact
         location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="18806496891430" >
+    <build timestamp="30179027769863" >
         <artifact
             location="/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
