@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/menu/main.xml"
+        "merged": "C:\\Users\\andriusic\\bolsard\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\andriusic\\bolsard\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
-        "source": "/home/andriusic/Documents/AndroidStudioProjects/BolsaRD/app/src/main/res/menu/activity_main_drawer.xml"
+        "merged": "C:\\Users\\andriusic\\bolsard\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "C:\\Users\\andriusic\\bolsard\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
     }
 ]
